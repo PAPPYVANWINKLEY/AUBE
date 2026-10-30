@@ -1,0 +1,31 @@
+SEOUL MAP GEOMETRY LICENSES
+
+1. Roads and river geometry: © OpenStreetMap contributors.
+   Data made available under the Open Data Commons Open Database License 1.0 (ODbL).
+   License: https://opendatacommons.org/licenses/odbl/1-0/
+   Copyright and contributing sources: https://www.openstreetmap.org/copyright
+   This applies to seoul-roads.geojson, seoul-water.geojson, seoul-river-centerlines.geojson,
+   and their corresponding layers in seoul-map-data.js / seoul-map-data.json.
+   Modifications: selected Seoul geometry from OpenStreetMap; road points simplified
+   approximately 6 metres; grouped by road class. Secondary roads are limited to the
+   Gangnam context. Water relations assembled from original shared OSM way endpoints.
+   These derivative geometry datasets are offered under ODbL 1.0. Keep the machine-readable
+   dataset accessible alongside the map. It is not subject to a proprietary asset restriction.
+
+2. District geometry: Lucy Park, southkorea/seoul-maps; source: KOSTAT 2013 census boundaries.
+   Repository declares Apache License, Version 2.0. See bundled APACHE-2.0.txt.
+   Source: https://github.com/southkorea/seoul-maps
+   This applies to seoul-districts.geojson, gangnam-boundary.geojson and their corresponding
+   layers in seoul-map-data.js / seoul-map-data.json. Gangnam was extracted from the source
+   district collection. Coordinates in the combined JS/JSON were rounded to 5 decimals.
+   The district geometry was already generalized by the source repository.
+
+3. Fictional role-play pins, story locations and editorial overlays are separate from
+   the geographic datasets. They must not be described as OpenStreetMap or KOSTAT facts.
+   No ownership or license claim is made here over the site's original fictional content.
+
+VISIBLE MAP CREDIT
+Map data © OpenStreetMap contributors · Districts: KOSTAT 2013 / Lucy Park
+Link OpenStreetMap to https://www.openstreetmap.org/copyright
+Link district credit to https://github.com/southkorea/seoul-maps
+Keep this credit legible, near the map. Also label RP pins as fictional/approximate.
