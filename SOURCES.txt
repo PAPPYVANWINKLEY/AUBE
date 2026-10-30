@@ -1,0 +1,54 @@
+SELF-CONTAINED SEOUL BASEMAP
+Prepared from real geodata on 2026-10-21. No external requests, API keys, account,
+tracking, local geolocation, or private addresses are required at runtime.
+
+DELIVERABLES
+seoul-districts.geojson: 25 generalized Seoul district polygons. WGS84 [longitude, latitude].
+seoul-roads.geojson: 4 grouped MultiLineString features, properties.highway one of
+motorway/trunk/primary/secondary. properties.detailOnly is true for secondary. 439,269 bytes.
+seoul-water.geojson: 108 actual Polygon/MultiPolygon river areas, including Han River,
+with island holes retained. Properties include source OSM identifier and names where present.
+MAP-LICENSES.txt, APACHE-2.0.txt, map-sources.json: publish with the selected datasets.
+
+ORIGINAL SOURCES
+Districts: https://github.com/southkorea/seoul-maps
+https://raw.githubusercontent.com/southkorea/seoul-maps/master/kostat/2013/json/seoul_municipalities_geo_simple.json
+2013 KOSTAT census geography; repository processed by Lucy Park, declares Apache v2.0.
+These are historical generalized boundaries, not exact current cadastral boundaries.
+
+Roads and rivers: OpenStreetMap, obtained through https://overpass-api.de/api/interpreter
+Snapshot: 2026-10-21T23:41:52Z. Original query is included in overpass-query.txt.
+Read-only API documentation: https://wiki.openstreetmap.org/wiki/Overpass_API
+Data license: https://opendatacommons.org/licenses/odbl/1-0/
+Copyright: https://www.openstreetmap.org/copyright
+Attribution: https://osmfoundation.org/wiki/Licence/Attribution_Guidelines
+All roads and river areas in these datasets originate from OSM geometry. None were invented.
+Road geometry has been visually generalized by approximately 6 m for interactive rendering.
+The published road database is generalized and grouped by road class; original geometry
+can be retrieved through the provided OSM query and snapshot reference.
+
+RENDERING
+Suggested overview bounds [west,south,east,north]: [126.76,37.43,127.18,37.70].
+Gangnam context bounds: [126.99,37.45,127.14,37.565].
+Gangnam boundary source bounds approximately [127.01397,37.45578,127.12441,37.53606].
+Use the explicit camera bounds, not the extent of water data: several valid river relations
+extend beyond the chosen viewport. Clip all shapes to the viewport.
+Draw district fills, then water fills with evenodd rule for islands, then roads.
+Render grouped roads using one SVG path per highway class. Hide secondary at overview scale.
+A local equirectangular projection corrected by cos(37.56 degrees) is adequate for this
+editorial Seoul map: x=(lon-west)*cos(37.56 degrees), y=north-lat, with a common scale.
+Do not scale x and y independently, which distorts the map.
+
+FICTION
+Keep story pins in a separate data layer labeled fictional/approximate. They are not real
+business locations or private addresses. Do not claim exact current boundaries or navigation
+accuracy. This is a real geographic base with a fictional role-play overlay.
+
+TILES NOT USED
+CARTO's current official documentation requires API keys for raster tiles, including no-label
+styles, and says keyless requests receive a watermark. Therefore the former keyless CARTO URL
+recipe was not chosen: https://github.com/CartoDB/basemap-styles/blob/master/README.md
+OSM standard raster tile policy prohibits prefetch/bulk download for offline bundling:
+https://operations.osmfoundation.org/policies/tiles/
+
+Fictional overlay update (2026-10-22): Seo family residence uses user-confirmed Seongbuk-dong, approximate representative coordinate [126.993,37.596], not an actual residence address. Neighborhood location cross-check: https://mapcarta.com/29731238 . No new geographic geometry is derived from this source.
