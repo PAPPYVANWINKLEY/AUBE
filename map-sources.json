@@ -1,0 +1,33 @@
+{
+  "crs": "EPSG:4326",
+  "coordinateOrder": "longitude, latitude",
+  "osmSnapshot": "2026-10-21T23:41:52Z",
+  "overviewBounds": [
+    126.76,
+    37.43,
+    127.18,
+    37.7
+  ],
+  "gangnamContextBounds": [
+    126.99,
+    37.45,
+    127.14,
+    37.565
+  ],
+  "boundaries": {
+    "source": "https://github.com/southkorea/seoul-maps",
+    "sourceFile": "https://raw.githubusercontent.com/southkorea/seoul-maps/master/kostat/2013/json/seoul_municipalities_geo_simple.json",
+    "year": 2013,
+    "license": "Apache-2.0",
+    "creator": "Lucy Park; source KOSTAT 2013",
+    "note": "Historical generalized district boundaries, not surveying or navigation data."
+  },
+  "roadsAndWater": {
+    "source": "https://www.openstreetmap.org/copyright",
+    "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "copyright": "© OpenStreetMap contributors",
+    "modifications": "Selected roads and water around Seoul; coordinate precision rounded, roads simplified approximately 6 m and grouped by highway class. Secondary roads limited to Gangnam context. Other original OSM polygons preserved with islands.",
+    "download": "seoul-roads-compact.geojson"
+  },
+  "fiction": "RP locations must be separately marked as fictional, approximate placements. No private-address or device-location data is included."
+}
