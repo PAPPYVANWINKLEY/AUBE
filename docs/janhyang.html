@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="향수병: 네 다음 남편에게 — 잔향 : 이혼한 후에. 웹툰을 세로 스크롤로 감상하세요.">
+<title>잔향 : 이혼한 후에 | 향수병: 네 다음 남편에게</title>
+<meta property="og:title" content="잔향 : 이혼한 후에">
+<meta property="og:description" content="향수병: 네 다음 남편에게 · 웹툰">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pappyvanwinkley.github.io/AUBE/janhyang.html">
+<style>
+*{box-sizing:border-box}html{background:#191919}body{margin:0;color:#292929;font-family:system-ui,-apple-system,sans-serif}main{width:100%;max-width:1000px;margin:0 auto;background:#fff}img{display:block;width:100%;height:auto}#load-status{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:1;max-width:calc(100% - 32px);padding:10px 16px;border-radius:4px;background:#fff;color:#333;box-shadow:0 2px 16px #0002;font-size:14px;text-align:center}#load-status[hidden]{display:none}#load-status a{color:inherit}footer{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;padding:28px 16px;background:#fff}footer a{color:#554a3d;font-size:14px;text-underline-offset:4px}a:focus-visible{outline:2px solid #8c603b;outline-offset:5px}
+</style>
+</head>
+<body>
+<div id="load-status" role="status">웹툰을 불러오는 중입니다.</div>
+<main id="top" aria-label="잔향 : 이혼한 후에 웹툰">
+<img id="webtoon" src="https://i.cpvw.uk/TYN/WEBTOON1.png" width="1000" height="23936" alt="잔향 : 이혼한 후에 — 향수병: 네 다음 남편에게 프롤로그 웹툰" decoding="async" fetchpriority="high">
+<footer><a href="./#about">작품 소개로</a><a href="#top">맨 위로 ↑</a></footer>
+</main>
+<script>
+const comic=document.getElementById('webtoon');
+const status=document.getElementById('load-status');
+function loaded(){status.hidden=true;}
+function failed(){status.hidden=false;status.textContent='웹툰을 불러오지 못했습니다. ';const link=document.createElement('a');link.href=comic.src;link.textContent='원본 이미지 열기';status.append(link);}
+comic.addEventListener('load',loaded);comic.addEventListener('error',failed);
+if(comic.complete){if(comic.naturalWidth)loaded();else failed();}
+</script>
+</body>
+</html>
